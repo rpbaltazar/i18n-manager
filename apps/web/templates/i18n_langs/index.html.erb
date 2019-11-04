@@ -1,0 +1,14 @@
+<h2>All langs</h2>
+
+<% if i18n_langs.any? %>
+  <div id="i18n_langs">
+    <% i18n_langs.each do |i18n_lang| %>
+      <div class="i18n_lang">
+        <h3><%= i18n_lang.language_name %></h3>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p class="placeholder"> There are no language files.</p>
+<% end %>
+<a href="/i18n_langs/new"> New Language </a>
